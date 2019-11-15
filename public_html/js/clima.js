@@ -14,7 +14,7 @@ function getClima() {
 
             temperatura = data.main.temp - 273;
             var tempFormatada = temperatura.toFixed(2).split('.');
-qweeqqweqweqwe
+
             $('#temperatura').html(tempFormatada + "º");
 
             descricao = traduzirDescricao(data.weather[0].description);
@@ -35,7 +35,8 @@ qweeqqweqweqwe
             $('#pordosol').html(descDataPorDoSol);
             
             var icone = data.weather[0].icon;
-            var caminhoIcone = 'img/icones/'
+            var caminhoIcone = 'img/icones/'+icone+'.png';
+            $('#icone').attr('src',caminhoIcone);
 
             temperaturaMax = data.main.temp_max - 273;
             var tempMaxFormatada = temperaturaMax.toFixed(2).split('.');
